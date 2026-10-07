@@ -1,0 +1,2 @@
+problem_id,n_vars,n_clauses,n_literals,max_lits,label,status,satisfied_count,elapsed_sec,matched_label,verified,nodes,shallow_bt,deep_bt,evals,max_depth
+1,27,108,243,3,S,SAT,108,0.0013473308645188808,True,True,55,23,5,56,27
