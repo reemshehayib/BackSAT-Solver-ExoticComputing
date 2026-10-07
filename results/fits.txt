@@ -1,10 +1,14 @@
-[BACK-SAT kSAT] worst-case fit: power t = 3.67e-08 * n^5.33   |   exponential t = 2.66e-05 * 1.605^n
+[BACK-SAT kSAT] worst-case fit: power t = 6.12e-08 * n^5.50   |   exponential t = 5.43e-05 * 1.629^n
 [BACK-SAT kSAT] nodes: worst ≈ 4.95*1.495^n, median ≈ 3.09*1.302^n (full tree = 2^(n+1)-2 ; brute force = up to 2^n assignments)
+[BRUTE kSAT] time growth per identifier: worst 2.19, median 2.14
+[BACK kSAT] time growth per identifier: worst 1.63, median 1.40
 [BRUTE-SAT kSAT] worst-case fit (completed runs only): power n^6.83 | exponential 1.778^n
-[kSAT] speedup over 339 problems both finished: median 6.8x, min 0.02x, max 14582x; slower than brute on 92
+[kSAT] speedup over 339 problems both finished: median 2.6x, min 0.01x, max 3548x; slower than brute on 127
 [kSAT] problems BRUTE timed out on that BACK-SAT solved: 61
-[BACK-SAT kSATu] worst-case fit: power t = 4.05e-08 * n^5.28   |   exponential t = 2.82e-05 * 1.596^n
+[BACK-SAT kSATu] worst-case fit: power t = 8.2e-08 * n^5.40   |   exponential t = 6.74e-05 * 1.609^n
 [BACK-SAT kSATu] nodes: worst ≈ 5.64*1.481^n, median ≈ 2.78*1.416^n (full tree = 2^(n+1)-2 ; brute force = up to 2^n assignments)
+[BRUTE kSATu] time growth per identifier: worst 2.19, median 2.24
+[BACK kSATu] time growth per identifier: worst 1.61, median 1.53
 [BRUTE-SAT kSATu] worst-case fit (completed runs only): power n^6.84 | exponential 1.780^n
-[kSATu] speedup over 176 problems both finished: median 21.8x, min 0.10x, max 16559x; slower than brute on 25
+[kSATu] speedup over 176 problems both finished: median 7.5x, min 0.09x, max 5268x; slower than brute on 43
 [kSATu] problems BRUTE timed out on that BACK-SAT solved: 64

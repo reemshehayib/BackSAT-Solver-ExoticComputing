@@ -1,15 +1,17 @@
-problem 1: n=4 m=5 -> UNSAT (4/5) in 0.0000s nodes=30 shallow=15 deep=15 [label=U, matched=True]
-problem 2: n=6 m=7 -> UNSAT (6/7) in 0.0001s nodes=126 shallow=63 deep=63 [label=U, matched=True]
-problem 3: n=8 m=9 -> UNSAT (8/9) in 0.0005s nodes=510 shallow=255 deep=255 [label=U, matched=True]
-problem 4: n=10 m=11 -> UNSAT (10/11) in 0.0025s nodes=2046 shallow=1023 deep=1023 [label=U, matched=True]
-problem 5: n=12 m=13 -> UNSAT (12/13) in 0.0118s nodes=8190 shallow=4095 deep=4095 [label=U, matched=True]
-problem 6: n=14 m=15 -> UNSAT (14/15) in 0.0513s nodes=32766 shallow=16383 deep=16383 [label=U, matched=True]
-problem 7: n=16 m=17 -> UNSAT (16/17) in 0.2222s nodes=131070 shallow=65535 deep=65535 [label=U, matched=True]
-problem 8: n=18 m=19 -> UNSAT (18/19) in 0.9769s nodes=524286 shallow=262143 deep=262143 [label=U, matched=True]
-problem 9: n=20 m=21 -> UNSAT (20/21) in 4.2597s nodes=2097150 shallow=1048575 deep=1048575 [label=U, matched=True]
+Machine: ricky-bobby | Linux-6.8.0-138-generic-x86_64-with-glibc2.35 | x86_64 | Python 3.11.7
+Input: /home/rshehayi/exotic-SAT/BackSAT/data/worstcase_cnf.csv
+problem 1: n=4 m=5 -> UNSAT (4/5) in 0.0001s nodes=30 shallow=15 deep=15 [label=U, matched=True]
+problem 2: n=6 m=7 -> UNSAT (6/7) in 0.0004s nodes=126 shallow=63 deep=63 [label=U, matched=True]
+problem 3: n=8 m=9 -> UNSAT (8/9) in 0.0021s nodes=510 shallow=255 deep=255 [label=U, matched=True]
+problem 4: n=10 m=11 -> UNSAT (10/11) in 0.0117s nodes=2046 shallow=1023 deep=1023 [label=U, matched=True]
+problem 5: n=12 m=13 -> UNSAT (12/13) in 0.0372s nodes=8190 shallow=4095 deep=4095 [label=U, matched=True]
+problem 6: n=14 m=15 -> UNSAT (14/15) in 0.1402s nodes=32766 shallow=16383 deep=16383 [label=U, matched=True]
+problem 7: n=16 m=17 -> UNSAT (16/17) in 0.6467s nodes=131070 shallow=65535 deep=65535 [label=U, matched=True]
+problem 8: n=18 m=19 -> UNSAT (18/19) in 2.7098s nodes=524286 shallow=262143 deep=262143 [label=U, matched=True]
+problem 9: n=20 m=21 -> UNSAT (20/21) in 11.8101s nodes=2097150 shallow=1048575 deep=1048575 [label=U, matched=True]
 
-SUMMARY (BACK-SAT): BackSAT/data/worstcase_cnf.csv
-
+SUMMARY (BACK-SAT): /home/rshehayi/exotic-SAT/BackSAT/data/worstcase_cnf.csv
+--------------------------------------------
 Total problems:       9
 Satisfiable:          0
 Unsatisfiable:        9
@@ -17,5 +19,7 @@ Timed out (15s):     0
 Matched label:        9
 Mismatched label:     0
 SAT assignments that failed verification: 0
-Total search time:    5.53s
+Total search time:    15.36s
 Results written to:   /home/rshehayi/exotic-SAT/BackSAT/results/back_worstcase_results.csv
+============================================
+

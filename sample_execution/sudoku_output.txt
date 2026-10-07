@@ -1,6 +1,6 @@
 Machine: ricky-bobby | Linux-6.8.0-138-generic-x86_64-with-glibc2.35 | x86_64 | Python 3.11.7
 Input: /home/rshehayi/exotic-SAT/BackSAT/data/sudoku2x2.cnf.csv
-problem 1: n=8 m=16 -> SAT (16/16) in 0.0002s nodes=38 shallow=17 deep=13 [label=None, matched=None]
+problem 1: n=8 m=16 -> SAT (16/16) in 0.0003s nodes=38 shallow=17 deep=13 [label=None, matched=None]
   Assignment: x1=T, x2=F, x3=F, x4=T, x5=F, x6=T, x7=T, x8=F
 
 SUMMARY (BACK-SAT): /home/rshehayi/exotic-SAT/BackSAT/data/sudoku2x2.cnf.csv
@@ -15,7 +15,7 @@ Results written to:   /home/rshehayi/exotic-SAT/BackSAT/results/back_sudoku2x2_r
 ============================================
 
 Input: /home/rshehayi/exotic-SAT/BackSAT/data/sudoku3x3_cnf.csv
-problem 1: n=27 m=108 -> SAT (108/108) in 0.0013s nodes=55 shallow=23 deep=5 [label=S, matched=True]
+problem 1: n=27 m=108 -> SAT (108/108) in 0.0029s nodes=55 shallow=23 deep=5 [label=S, matched=True]
   Assignment: x1=T, x2=F, x3=F, x4=F, x5=T, x6=F, x7=F, x8=F, x9=T, x10=F, x11=T, x12=F, x13=F, x14=F, x15=T, x16=T, x17=F, x18=F, x19=F, x20=F, x21=T, x22=T, x23=F, x24=F, x25=F, x26=T, x27=F
 
 SUMMARY (BACK-SAT): /home/rshehayi/exotic-SAT/BackSAT/data/sudoku3x3_cnf.csv

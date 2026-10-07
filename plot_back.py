@@ -65,6 +65,14 @@ def scatter_sat_unsat(ax, rows, yfun):
             x, y = zip(*pts)
             ax.scatter(x, y, s=16, c=col, alpha=0.7, edgecolors='white', linewidths=0.4, label=lab)
 
+def growth(rows, stat):
+    """growth factor b in t = a*b^n, using only n where no run timed out"""
+    by = defaultdict(list)
+    for r in rows:
+        by[int(r['n_vars'])].append(None if r['status'] == 'TIMEOUT' else float(r['elapsed_sec']))
+    ns = [n for n in sorted(by) if None not in by[n]]
+    ys = [stat(by[n]) for n in ns]
+    return float(np.exp(np.polyfit(ns, np.log(ys), 1)[0]))
 
 def plot_time(rows, ds, fitlog):
     ns, worst, _ = envelope(rows)
@@ -179,6 +187,9 @@ if __name__ == '__main__':
         plot_per_literal(back, ds)
         plot_nodes(back, ds, fitlog)
         if brute:
+            for name, rows in (('BRUTE', brute), ('BACK', back)):
+                fitlog.append(f"[{name} {ds}] time growth per identifier: "
+                              f"worst {growth(rows, max):.2f}, median {growth(rows, np.median):.2f}")
             plot_compare(back, brute, ds, fitlog)
             plot_speedup(back, brute, ds, fitlog)
         else:

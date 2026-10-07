@@ -40,7 +40,7 @@ def check1():
 
 def check2(maxn):
     print("\n" + "=" * 60)
-    print(f"CHECK 2: BACK-SAT vs brute force on all wffs with n <= {maxn}")
+    print(f"CHECK 2: BACK-SAT (plain and --unit) vs brute force on all wffs with n <= {maxn}")
     print("=" * 60)
     ok = True
     for name in ('kSAT.cnf.csv', 'kSATu.cnf.csv'):
@@ -54,6 +54,11 @@ def check2(maxn):
         for w in wffs:
             status, a, count, st = back_sat(w['n_vars'], w['clauses'])
             is_sat, true_max = brute_max(w['n_vars'], w['clauses'])
+            status_u, a_u, _, _ = back_sat(w['n_vars'], w['clauses'], use_unit=True)
+            if (status_u == 'SAT') != is_sat or (
+                    status_u == 'SAT' and check_assignment(w['clauses'], a_u) != w['n_clauses']):
+                disagree += 1
+                print(f"  DISAGREE (unit) problem {w['problem_id']}")
             if (status == 'SAT') != is_sat:
                 disagree += 1
                 print(f"  DISAGREE problem {w['problem_id']}: back={status} brute={'SAT' if is_sat else 'UNSAT'}")
